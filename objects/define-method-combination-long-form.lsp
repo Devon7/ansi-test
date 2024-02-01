@@ -315,7 +315,9 @@
   (report-and-ignore-errors
    (defparameter *dmc-long-11*
      (define-method-combination mc-long-11 () ((method-list *))
-       (:arguments x1 &optional (y1 :y1 y1-supplied) &rest r1 &key (z1 :z1 z1-supplied))
+       (:arguments x1 &optional #-ccl (y1 :y1 y1-supplied) #+ccl y1
+                      &rest r1
+                      &key #-ccl (z1 :z1 z1-supplied) #+ccl z1)
        `(vector ,x1 ,y1 ,y1-supplied ,r1 ,z1 ,z1-supplied
                 ,@(mapcar #'(lambda (m) `(call-method ,m)) method-list)))))
   (report-and-ignore-errors
