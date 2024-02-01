@@ -5,6 +5,8 @@
 *.fasl
 *.lx64fsl
 *.lx32fsl
+*.dx64fsl
+*.dx32fsl
 *.sse2f
 *.bc
 *.tem
