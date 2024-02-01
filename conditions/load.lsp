@@ -6,7 +6,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "condition.lsp")
   (load "cell-error-name.lsp")
   (load "assert.lsp")

@@ -23,7 +23,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "number-comparison.lsp")
   (load "max.lsp")
   (load "min.lsp")

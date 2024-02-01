@@ -10,7 +10,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "find-symbol.lsp")
   (load "find-all-symbols.lsp")
   (load "find-package.lsp")

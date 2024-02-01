@@ -5,7 +5,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "types-and-class.lsp")
   (load "types-and-class-2.lsp")
   (load "coerce.lsp")

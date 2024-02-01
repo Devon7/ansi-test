@@ -5,7 +5,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "reader-test.lsp")
   (load "with-standard-io-syntax.lsp")
   (load "copy-readtable.lsp")

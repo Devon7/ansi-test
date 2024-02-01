@@ -8,7 +8,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "copy-seq.lsp")
   (load "elt.lsp")
   (load "fill.lsp")

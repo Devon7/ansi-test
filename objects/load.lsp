@@ -9,7 +9,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "defclass.lsp")
   (load "defclass-01.lsp")
   (load "defclass-02.lsp")

@@ -7,7 +7,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "input-stream-p.lsp")
   (load "output-stream-p.lsp")
   (load "interactive-stream-p.lsp")

@@ -7,7 +7,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "directory.lsp")
   (load "probe-file.lsp")
   (load "ensure-directories-exist.lsp")

@@ -4,7 +4,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "do.lsp")
   (load "dostar.lsp")
   (load "dolist.lsp")

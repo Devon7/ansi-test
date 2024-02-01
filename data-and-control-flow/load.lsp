@@ -7,7 +7,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "data-and-control-flow.lsp")
   (load "places.lsp")
   (load "psetq.lsp")

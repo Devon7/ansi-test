@@ -4,7 +4,7 @@
 
 (let ((*default-pathname-defaults*
        (make-pathname
-        :directory (pathname-directory *load-pathname*))))
+        :directory (pathname-directory *load-truename*))))
   (load "structure-00.lsp")
   (load "structures-01.lsp")
   (load "structures-02.lsp")
