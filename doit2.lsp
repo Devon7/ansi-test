@@ -24,4 +24,4 @@
 (time (regression-test:do-tests))
 
 #+allegro (cl-user::exit)
-#+(or cmu sbcl gcl armedbear) (cl-user::quit)
+#+(or cmu sbcl ccl gcl armedbear) (cl-user::quit)

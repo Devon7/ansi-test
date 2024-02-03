@@ -60,5 +60,5 @@ operations mention that they \"might signal\" the error.")
 
 ;;; Haible disagrees with :result-type-element-type-by-subtype
 #+clisp (rt::disable-note :result-type-element-type-by-subtype)
-#+(or openmcl gcl ecl) (rt::disable-note :nil-vectors-are-strings)
+#+(or ccl openmcl gcl ecl) (rt::disable-note :nil-vectors-are-strings)
 #+gcl (rt::disable-note :allow-nil-arrays)

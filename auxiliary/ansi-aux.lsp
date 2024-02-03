@@ -757,7 +757,7 @@ the condition to go uncaught if it cannot be classified."
           (unuse-package package using-package)))
       (delete-package package))))
 
-#-(or allegro openmcl lispworks)
+#-(or allegro ccl openmcl lispworks)
 (defun delete-all-versions (pathspec)
   "Replace the versions field of the pathname specified by pathspec with
    :wild, and delete all the files this refers to."
@@ -766,8 +766,8 @@ the condition to go uncaught if it cannot be classified."
     (mapc #'delete-file truenames)))
 
 ;;; This is a hack to get around an ACL bug; OpenMCL also apparently
-;;; needs it
-#+(or allegro openmcl lispworks)
+;;; needs it -- NOTE: implementation-dependent so no bug.
+#+(or allegro ccl openmcl lispworks)
 (defun delete-all-versions (pathspec)
   (when (probe-file pathspec) (delete-file pathspec)))
 
