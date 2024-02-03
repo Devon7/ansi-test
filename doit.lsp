@@ -10,4 +10,4 @@
 (when *load-pathname*
   (mapc #'regression-test:rem-test '(cl-test::load-pathname.1 cl-test::load-truename.1)))
 
-(time (regression-test:do-tests :exit t))
+(regression-test::exit (time (regression-test:do-tests)))
